@@ -7,7 +7,9 @@ function MyApp({ Component, pageProps }) {
     <>
       <main className='w3-light-grey'>
         <Navbar />
-        <Component {...pageProps} />
+        <div className='w3-content' style={{maxWidth:'1600px'}}>
+          <Component {...pageProps} />
+        </div>
       </main>
     </>
 
