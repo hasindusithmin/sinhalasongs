@@ -1,16 +1,8 @@
 
-import Head from "next/head"
+import StockSnippet from "../components/StockSnippet"
 
-export default function Singer() {
+export default function Singers() {
 
-    return (
-        <>
-            <Head>
-                <title>sinhalasongs | singer</title>
-            </Head>
-            <main>
-                
-            </main>
-        </>
-    )
+    return <StockSnippet Exchange="NASDAQ" Ticker="AAPL" />
+    
 }
