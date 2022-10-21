@@ -8,13 +8,17 @@ export default function Navbar() {
         document.getElementById("myOverlay").style.display = "none";
     }
 
+    const style = {
+    zIndex: 3,
+    width: '300px'
+    }
 
     return (
         <>
             <Head>
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
             </Head>
-            <nav className="w3-sidebar w3-collapse w3-white w3-animate-left" id="mySidebar" style={{zIndex: 3, width: '300px'}}><br />
+            <nav className="w3-sidebar w3-collapse w3-light-grey w3-animate-left" id="mySidebar" style={style}><br />
                 <div className="w3-container" >
                     <span onClick={w3_close} className="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
                         <i className="fa fa-remove"></i>

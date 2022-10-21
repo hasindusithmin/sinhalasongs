@@ -6,7 +6,7 @@ import Navbar from '../components/Navbar'
 function MyApp({ Component, pageProps }) {
  
   return (
-    <div className='w3-content' style={{ maxWidth:'1600px',}}>
+    <div className='w3-content' style={{maxWidth:'1600px'}}>
       <Navbar/>
       <div className="w3-main" style={{marginLeft:'300px'}}>
         <Component {...pageProps} />

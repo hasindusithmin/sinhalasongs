@@ -21,28 +21,27 @@ export default function Home() {
         <div className="w3-half w3-panel w3-margin-bottom">
           <h3><b>ABOUT</b></h3>
           <h6 className='w3-justify w3-opacity'>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. 
+            Welcome to the music download center for Sri Lanka, sinhalasongs.vercel.app. We're committed to giving you excellent service at no cost while maintaining your privacy and enjoyment, with a focus on high quality, speed, and availability around-the-clock. Any form of user feedback on our quality and services is always welcome. Do not hesitate to contact us if you have any inquiries or suggestions.
           </h6>
         </div>
       </div>
 
       <div className="w3-row-padding w3-pale-red">
-        <div className="w3-panel ">
-          <p className='w3-large w3-wide'><i>"Music is the universal language of mankind."</i></p>
-          <p>- Henry Wadsworth Longfellow</p>
-        </div>
+          <div className="w3-panel ">
+            <p className='w3-large w3-wide'><i>"Music is the universal language of mankind."</i></p>
+            <p>- Henry Wadsworth Longfellow</p>
+          </div>
       </div>
-
       <div className="w3-row-padding w3-pale-green">
-        <div className="w3-half w3-panel">
+        <div className="w3-half w3-padding">
             <SearchArtist />
         </div>
-        <div className="w3-half w3-panel">
+        <div className="w3-half">
             <SearchSongs /> 
         </div>
       </div>
 
-      <div className='w3-padding'></div>
+      <div className='w3-padding-32 w3-pale-green'></div>
 
     </>
   )
