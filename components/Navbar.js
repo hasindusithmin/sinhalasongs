@@ -25,9 +25,7 @@ export default function Navbar() {
                 </div>
                 <div className="w3-bar-block">
                     <Link href="/"><span onClick={w3_close} className="w3-bar-item w3-button w3-padding"><i className="fa fa-home fa-fw w3-margin-right"></i>HOME</span></Link>
-                    <span onClick={w3_close} className="w3-bar-item w3-button w3-padding"><i className="fa fa-microphone fa-fw w3-margin-right"></i>SINGERS</span>
-                    <span onClick={w3_close} className="w3-bar-item w3-button w3-padding"><i className="fa fa-music fa-fw w3-margin-right"></i>MUSIC</span>
-                    <span onClick={w3_close} className="w3-bar-item w3-button w3-padding"><i className="fa fa-rss fa-fw w3-margin-right"></i>ABOUT</span>
+                    <Link href="/book"><span onClick={w3_close} className="w3-bar-item w3-button w3-padding"><i className="fa fa-book fa-fw w3-margin-right"></i>LIBRARY</span></Link>
                 </div>
             </nav>
             <div className="w3-overlay w3-hide-large w3-animate-opacity" onClick={w3_close} style={{ cursor: 'pointer' }} title="close side menu" id="myOverlay"></div>
