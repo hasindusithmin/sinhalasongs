@@ -72,22 +72,22 @@ export default function Name() {
                 </div>
                 <div className="w3-half w3-panel w3-margin-bottom">
                     
-                <div className="w3-white w3-margin">
-                    <div className="w3-container w3-padding w3-black">
-                        <h4>Advertisement</h4>
-                    </div>
-                    {
-                        [1,2,3,4,5].map(e=>{
-                            return (
-                                <div key={e} className="w3-container w3-white">
-                                    <div className="w3-container w3-display-container w3-light-grey w3-section" style={{height:'200px'}}>
-                                        <span className="w3-display-middle">Your AD Here</span>
+                    <div className="w3-white w3-margin">
+                        <div className="w3-container w3-padding w3-black">
+                            <h4>Advertisement</h4>
+                        </div>
+                        {
+                            [1,2,3,4,5].map(e=>{
+                                return (
+                                    <div key={e} className="w3-container w3-white">
+                                        <div className="w3-container w3-display-container w3-light-grey w3-section" style={{height:'200px'}}>
+                                            <span className="w3-display-middle">Your AD Here</span>
+                                        </div>
                                     </div>
-                                </div>
-                            )
-                        })
-                    }
-                </div>
+                                )
+                            })
+                        }
+                    </div>
 
                 </div>
             </div>
