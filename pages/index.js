@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Header from '../components/Header';
 import SearchArtist from '../components/SearchArtist';
+import SearchSongs from '../components/SearchSongs';
 export default function Home() {
   return (
     <>
@@ -37,12 +38,7 @@ export default function Home() {
             <SearchArtist />
         </div>
         <div className="w3-half w3-panel">
-            <p>
-              <input className='w3-input' id="song" type="search" dir="ltr" spellCheck={false} autoCorrect="off" autoComplete="off" autoCapitalize="off" maxLength="2048" tabIndex="1" />
-            </p>
-            <p className='w3-center'>
-              <button type="button" className="w3-button w3-light-grey" >SEARCH</button>
-            </p>  
+            <SearchSongs /> 
         </div>
       </div>
 

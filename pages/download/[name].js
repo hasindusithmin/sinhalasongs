@@ -7,8 +7,6 @@ export default function Song() {
 
     const {name,artist} = router.query;
 
-    console.log(name,artist);
-
     const [getSong,setgetSong] = useState(false)
     const [song,setSong] = useState(null)
     const [singer,setSinger] = useState(null)
