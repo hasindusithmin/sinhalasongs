@@ -18,16 +18,56 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header id="portfolio">
-        <span ><img src="https://www.w3schools.com/w3images/avatar_g2.jpg" style={{width:'65px'}} className="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity" /></span>
+      <header  className='w3-pale-yellow w3-padding'>
+        <span><img src="https://via.placeholder.com/300" alt="300x300" style={{width:'65px'}} className="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity" /></span>
         <span className="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onClick={w3_open}><i className="fa fa-bars"></i></span>
         <div className="w3-container">
           <h1><b>SINHALA SONGS</b></h1>
-          <div className="w3-section w3-bottombar w3-border-black w3-padding-16">
+          <div className="w3-section w3-padding-16">
             Download your favorite songs here
           </div>
         </div>
       </header>
+
+      <div className="w3-row-padding w3-pale-blue">
+        <div className="w3-half w3-panel w3-margin-bottom">
+          <img src="/music.gif" alt='1489x838' className="w3-image w3-greyscale" style={{width:'100%'}} />
+        </div>
+        <div className="w3-half w3-panel w3-margin-bottom">
+          <h3><b>ABOUT</b></h3>
+          <h6 className='w3-justify w3-opacity'>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. 
+          </h6>
+        </div>
+      </div>
+
+      <div className="w3-row-padding w3-pale-red">
+        <div className="w3-panel ">
+          <p className='w3-large w3-wide'><i>"Music is the universal language of mankind."</i></p>
+          <p>- Henry Wadsworth Longfellow</p>
+        </div>
+      </div>
+
+      <div className="w3-row-padding w3-pale-green">
+        <div className="w3-half w3-panel">
+            <p>
+              <input id="singer" className='w3-input' type="search" dir="ltr" spellCheck={false} autoCorrect="off" autoComplete="off" autoCapitalize="off" maxLength="2048" tabIndex="1" />
+            </p>
+            <p className='w3-center'>
+              <button type="button" className="w3-button w3-light-grey" >SEARCH</button>
+            </p>
+        </div>
+        <div className="w3-half w3-panel">
+            <p>
+              <input className='w3-input' id="song" type="search" dir="ltr" spellCheck={false} autoCorrect="off" autoComplete="off" autoCapitalize="off" maxLength="2048" tabIndex="1" />
+            </p>
+            <p className='w3-center'>
+              <button type="button" className="w3-button w3-light-grey" >SEARCH</button>
+            </p>  
+        </div>
+      </div>
+
+      <div className='w3-padding'></div>
 
     </>
   )
