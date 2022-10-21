@@ -19,13 +19,13 @@ export default function Navbar() {
                     <span onClick={w3_close} className="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
                         <i className="fa fa-remove"></i>
                     </span>
-                    <img src="https://via.placeholder.com/300" alt="300x300" style={{ width: '45%' }} className="w3-round" /><br /><br />
+                    <img src="/300.gif" alt="300x300" style={{ width: '45%' }} className="w3-round" /><br /><br />
                     <h4><b>SINHALA SONGS</b></h4>
                     <p className="w3-text-grey w3-small">Download your favorite songs here</p>
                 </div>
                 <div className="w3-bar-block">
                     <Link href="/"><span onClick={w3_close} className="w3-bar-item w3-button w3-padding"><i className="fa fa-home fa-fw w3-margin-right"></i>HOME</span></Link>
-                    <Link href="/book"><span onClick={w3_close} className="w3-bar-item w3-button w3-padding"><i className="fa fa-book fa-fw w3-margin-right"></i>LIBRARY</span></Link>
+                    <Link href="/library"><span onClick={w3_close} className="w3-bar-item w3-button w3-padding"><i className="fa fa-book fa-fw w3-margin-right"></i>LIBRARY</span></Link>
                 </div>
             </nav>
             <div className="w3-overlay w3-hide-large w3-animate-opacity" onClick={w3_close} style={{ cursor: 'pointer' }} title="close side menu" id="myOverlay"></div>

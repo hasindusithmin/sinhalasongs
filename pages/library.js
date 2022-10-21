@@ -62,12 +62,15 @@ export default function Book() {
     return (
         <>
             <Head>
-                <title>sinhalasongs | book</title>
+                <title>sinhalasongs | Library</title>
             </Head>
 
-            <Header title="SINHALA SONGS" desc="Library" />
+            <Header title="SINHALA SONGS" desc="LIBRARY" />
 
             <div className="w3-row-padding w3-pale-blue">
+                <div className="w3-panel w3-center">
+                    <img src="/singer.gif" alt='singer' className="w3-image" style={{width:'50%'}} />
+                </div>
                 <SearchArtist/>
             </div>
 
