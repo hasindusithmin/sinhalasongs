@@ -21,8 +21,7 @@ export default function Song() {
 
     const download = () => {
         const Singer = singer.replaceAll(' ','%20').toLowerCase();
-        const Song = song.replaceAll(' ','_');
-        router.replace(`/api/download?url=https://sinhalasongscloudstorage.on.drv.tw/storage/mp3/${Singer}/${Song}.mp3`)
+        router.replace(`/api/download?url=https://sinhalasongscloudstorage.on.drv.tw/storage/mp3/${Singer}/${song}.mp3`)
     }
 
     return (
@@ -30,7 +29,7 @@ export default function Song() {
             <Head>
                 {song && <title>download | {song}</title>}
             </Head>
-            {singer  && <Header title={singer} desc={`Download ${song}`} />}
+            {singer  && <Header title={singer} desc={`Download ${song.replaceAll('_',' ')}`} />}
             <div className="w3-row-padding w3-pale-blue">
                 <div className="w3-half w3-panel w3-margin-bottom">
                     <div className="w3-white w3-margin">

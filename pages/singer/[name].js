@@ -30,7 +30,7 @@ export default function Name() {
     const downloadSong = event =>{
         let _ = event.target.id;
         _ = _.replaceAll(' ','_');
-        console.log(_);
+        router.replace(`/download/${_}?artist=${singer}`)
     }
 
     const searchSong = e => {
@@ -66,7 +66,7 @@ export default function Name() {
                         {
                             songs
                             &&
-                            songs.map(song => <li className="w3-center w3-hover w3-hover-pale-red" key={song} id={song} onDoubleClick={downloadSong} >{song}</li>)
+                            songs.map(song => <li className="w3-center w3-hover w3-hover-pale-red" title="Double click to download" key={song} id={song} onDoubleClick={downloadSong} >{song}</li>)
                         }
                     </ul>
                 </div>
