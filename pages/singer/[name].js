@@ -10,7 +10,9 @@ export default function Name() {
 
     const [singer,setSinger] = useState(null)
     const [songs,setSongs] = useState(null)
+    const [dupSongs,setdupSong] = useState(null)
     const [getName,setgetName] = useState(false)
+    const [notification,setNotification] = useState(null)
 
     const {name} = router.query;
 
@@ -22,12 +24,32 @@ export default function Name() {
             return song
         });
         setSongs(_)
+        setdupSong(_)
     }
 
     const downloadSong = event =>{
         let _ = event.target.id;
         _ = _.replaceAll(' ','_');
         console.log(_);
+    }
+
+    const searchSong = e => {
+        const value = e.target.value;
+        setNotification(null)
+        if (value === '') setSongs(dupSongs);
+        const _ = songs.filter(song => {
+            return song.startsWith(value)
+        })
+        setSongs(_)
+        if (value === '') setSongs(dupSongs)
+        if (_.length === 0 && value !== '') setNotification('result not found')
+        
+    }
+
+    const reRender = e => {
+        e.target.value = ''
+        setNotification(null)
+        setSongs(dupSongs)
     }
 
     return (
@@ -38,11 +60,13 @@ export default function Name() {
             {singer  && <Header title={singer} desc={`Download ${singer} songs here`} />}
             <div className="w3-row-padding w3-pale-blue">
                 <div className="w3-half w3-panel w3-margin-bottom">
-                    <ul className="w3-ul w3-hover w3-hover-pale-red">
+                    {notification && <p className="w3-center w3-text-red" id="notification">{notification}</p>}
+                    <input type="search" className="w3-input" placeholder="search ... " onInput={searchSong} onBlur={reRender}/>
+                    <ul className="w3-ul">
                         {
                             songs
                             &&
-                            songs.map(song => <li className="w3-center" key={song} id={song} onClick={downloadSong} >{song}</li>)
+                            songs.map(song => <li className="w3-center w3-hover w3-hover-pale-red" key={song} id={song} onDoubleClick={downloadSong} >{song}</li>)
                         }
                     </ul>
                 </div>
