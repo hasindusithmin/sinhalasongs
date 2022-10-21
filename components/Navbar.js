@@ -1,4 +1,5 @@
 import Head from "next/head"
+import Link from "next/link";
 
 export default function Navbar() {
 
@@ -23,7 +24,7 @@ export default function Navbar() {
                     <p className="w3-text-grey w3-small">Download your favorite songs here</p>
                 </div>
                 <div className="w3-bar-block">
-                    <span onClick={w3_close} className="w3-bar-item w3-button w3-padding w3-text-teal"><i className="fa fa-home fa-fw w3-margin-right"></i>HOME</span>
+                    <Link href="/"><span onClick={w3_close} className="w3-bar-item w3-button w3-padding"><i className="fa fa-home fa-fw w3-margin-right"></i>HOME</span></Link>
                     <span onClick={w3_close} className="w3-bar-item w3-button w3-padding"><i className="fa fa-microphone fa-fw w3-margin-right"></i>SINGERS</span>
                     <span onClick={w3_close} className="w3-bar-item w3-button w3-padding"><i className="fa fa-music fa-fw w3-margin-right"></i>MUSIC</span>
                     <span onClick={w3_close} className="w3-bar-item w3-button w3-padding"><i className="fa fa-rss fa-fw w3-margin-right"></i>ABOUT</span>

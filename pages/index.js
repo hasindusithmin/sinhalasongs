@@ -1,15 +1,7 @@
 import Head from 'next/head'
-
+import Header from '../components/Header';
+import SearchArtist from '../components/SearchArtist';
 export default function Home() {
-  function w3_open() {
-    document.getElementById("mySidebar").style.display = "block";
-    document.getElementById("myOverlay").style.display = "block";
-  }
-
-  function w3_close() {
-    document.getElementById("mySidebar").style.display = "none";
-    document.getElementById("myOverlay").style.display = "none";
-  }
   return (
     <>
       <Head>
@@ -18,16 +10,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header  className='w3-pale-yellow w3-padding'>
-        <span><img src="https://via.placeholder.com/300" alt="300x300" style={{width:'65px'}} className="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity" /></span>
-        <span className="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onClick={w3_open}><i className="fa fa-bars"></i></span>
-        <div className="w3-container">
-          <h1><b>SINHALA SONGS</b></h1>
-          <div className="w3-section w3-padding-16">
-            Download your favorite songs here
-          </div>
-        </div>
-      </header>
+      
+      <Header title="SINHALA SONGS" desc="Download your favorite songs here" />
 
       <div className="w3-row-padding w3-pale-blue">
         <div className="w3-half w3-panel w3-margin-bottom">
@@ -50,12 +34,7 @@ export default function Home() {
 
       <div className="w3-row-padding w3-pale-green">
         <div className="w3-half w3-panel">
-            <p>
-              <input id="singer" className='w3-input' type="search" dir="ltr" spellCheck={false} autoCorrect="off" autoComplete="off" autoCapitalize="off" maxLength="2048" tabIndex="1" />
-            </p>
-            <p className='w3-center'>
-              <button type="button" className="w3-button w3-light-grey" >SEARCH</button>
-            </p>
+            <SearchArtist />
         </div>
         <div className="w3-half w3-panel">
             <p>
