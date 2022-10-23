@@ -5,36 +5,16 @@ import songsbysinger from "../public/songsbysinger.json"
 import SearchArtist from "../components/SearchArtist";
 import { useState, useEffect } from "react"
 import { useRouter } from "next/router";
+import Songs from "../components/Songs";
 
-function Items({ currentItems }) {
 
-    const router = useRouter();
-
-    const handler = e => {
-        router.replace(`/singer/${e.target.innerText}`)
-    }
-    
-    return (
-        <>
-            {
-                currentItems
-                &&
-                <ul className="w3-ul">
-                    {
-                        currentItems.map((item) => (
-                            <li key={item} onClick={handler} className="w3-hover w3-hover-pale-green">{item}</li>
-                        ))
-                    }
-                </ul>
-            }
-        </>
-    );
-}
 
 export default function Book() {
 
     const items = Object.keys(songsbysinger);
-
+    const [shsingers,setshsingers] = useState(true)
+    const [songs,setSongs] = useState(null);
+    const [singer,setsinger] = useState(null)
     // We start with an empty list of items.
     const [currentItems, setCurrentItems] = useState(null);
     const [pageCount, setPageCount] = useState(0);
@@ -59,6 +39,42 @@ export default function Book() {
         setItemOffset(newOffset);
     };
 
+    const backbuttonhandler = ()=>{
+        setSongs(null)
+        setshsingers(true)
+    }
+
+    function Items({ currentItems }) {
+
+        const router = useRouter();
+    
+    
+        const handler = e => {
+            const singer = e.target.innerText;
+            setshsingers(false)
+            setsinger(singer)
+            setSongs(songsbysinger[singer])
+        }
+        
+        return (
+            <>
+                {
+                    currentItems
+                    &&
+                    <ul className="w3-ul">
+                        {
+                            currentItems.map((item) => (
+                                <li key={item} onClick={handler} className="w3-hover w3-hover-pale-green">{item}</li>
+                            ))
+                        }
+                    </ul>
+                }
+            </>
+        );
+    }
+
+   
+
     return (
         <>
             <Head>
@@ -75,24 +91,33 @@ export default function Book() {
             </div>
 
             <div className="w3-row-padding w3-pale-red w3-center">
+                {
+                    songs
+                    &&
+                    <Songs songs={songs} singer={singer} handler={backbuttonhandler}/>
+                }
 
-                <>
-                    <Items currentItems={currentItems} />
-                    <ReactPaginate
-                        breakLabel="..."
-                        nextLabel="&raquo;"
-                        onPageChange={handlePageClick}
-                        pageRangeDisplayed={5}
-                        pageCount={pageCount}
-                        previousLabel="&laquo;"
-                        renderOnZeroPageCount={null}
-                        className="w3-bar"
-                        pageClassName="w3-bar-item w3-button w3-border"
-                        previousClassName="w3-bar-item w3-button w3-border"
-                        nextClassName="w3-bar-item w3-button w3-border"
-                        activeClassName="w3-bar-item w3-button w3-pale-green w3-border"
-                    />
-                </>
+                {
+                    shsingers
+                    &&
+                    <>
+                        <Items currentItems={currentItems} />
+                        <ReactPaginate
+                            breakLabel="..."
+                            nextLabel="&raquo;"
+                            onPageChange={handlePageClick}
+                            pageRangeDisplayed={5}
+                            pageCount={pageCount}
+                            previousLabel="&laquo;"
+                            renderOnZeroPageCount={null}
+                            className="w3-bar"
+                            pageClassName="w3-bar-item w3-button w3-border"
+                            previousClassName="w3-bar-item w3-button w3-border"
+                            nextClassName="w3-bar-item w3-button w3-border"
+                            activeClassName="w3-bar-item w3-button w3-pale-green w3-border"
+                        />
+                    </>
+                }
 
             </div>
         </>

@@ -36,7 +36,7 @@ export default function Home() {
         <div className="w3-half w3-padding">
             <SearchArtist />
         </div>
-        <div className="w3-half">
+        <div className="w3-half w3-padding">
             <SearchSongs /> 
         </div>
       </div>
