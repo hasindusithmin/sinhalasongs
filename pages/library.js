@@ -64,7 +64,7 @@ export default function Book() {
                     <ul className="w3-ul">
                         {
                             currentItems.map((item) => (
-                                <li key={item} onClick={handler} className="w3-hover w3-hover-pale-green">{item}</li>
+                                <li key={item} onClick={handler} className="w3-hover w3-hover-light-grey">{item}</li>
                             ))
                         }
                     </ul>
@@ -90,7 +90,7 @@ export default function Book() {
                 <SearchArtist/>
             </div>
 
-            <div className="w3-row-padding w3-pale-red w3-center">
+            <div className="w3-row-padding w3-pale-green w3-center">
                 {
                     songs
                     &&
